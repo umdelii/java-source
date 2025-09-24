@@ -7,7 +7,6 @@ public class Test {
         System.out.println("뭘까");
         System.out.println("데이터베이스");
         // 메모
-        
 
     }
 }
