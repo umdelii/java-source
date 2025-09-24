@@ -12,7 +12,7 @@ public class SwitchEx1 {
         System.out.println("몇 월입니까");
         int month = Integer.parseInt(sc.nextLine());
 
-        String tuki = " ";
+        // String tuki = " ";
         // if (month == 3 || month == 4 || month == 5) {
         // tuki = "봄";
         // } else if (month == 6 || month == 7 || month == 8) {
@@ -32,23 +32,24 @@ public class SwitchEx1 {
             case 3:
             case 4:
             case 5:
-                tuki = "봄";
+                System.out.println("봄");
+                break;
             case 6:
             case 7:
             case 8:
-                tuki = "여름";
+                System.out.println("여름");
+                break;
             case 9:
             case 10:
             case 11:
-                tuki = "가을";
+                System.out.println("가을");
+                break;
             case 12:
             case 1:
             case 2:
-                tuki = "겨울";
-
+                System.out.println("겨울");
             default:
-                System.out.println(tuki);
-                break;
+                System.out.println("숫자를 다시 입력하시오");
         }
     }
 }
