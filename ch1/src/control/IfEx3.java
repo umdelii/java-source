@@ -44,5 +44,6 @@ public class IfEx3 {
             opt = ' ';
         }
         System.out.printf("학점 : %c%c", grade, opt);
+        sc.close();
     }
 }

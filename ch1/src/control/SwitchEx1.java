@@ -51,5 +51,7 @@ public class SwitchEx1 {
             default:
                 System.out.println("숫자를 다시 입력하시오");
         }
+        sc.close();
+        // 조건식 결과는 정수, 문자열만 가능
     }
 }

@@ -24,5 +24,6 @@ public class SwitchNinne {
             month = "숫자를 다시 입력하시오";
         }
         System.out.println(month);
+        sc.close();
     }
 }

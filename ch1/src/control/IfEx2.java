@@ -37,5 +37,24 @@ public class IfEx2 {
             grade = 'D';
         }
         System.out.println("등급 : " + grade);
+
+        switch (grade / 10) {
+            case 10:
+            case 9:
+                grade = 'A';
+                break;
+            case 8:
+                grade = 'B';
+                break;
+            case 7:
+                grade = 'C';
+                break;
+            case 6:
+                grade = 'D';
+                break;
+            default:
+                break;
+        }
+        sc.close();
     }
 }

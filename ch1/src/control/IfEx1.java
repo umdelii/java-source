@@ -31,5 +31,6 @@ public class IfEx1 {
         } else {
             System.out.println("불합격입니다");
         }
+        sc.close();
     }
 }

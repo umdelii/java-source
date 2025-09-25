@@ -17,6 +17,7 @@ public class ScannerEx2 {
         int input = Integer.parseInt(num); // ""(문자)->숫자로 변환
         System.out.println("input = " + input);
         System.out.println("input = " + (input + 1));
+        sc.close();
 
     }
 }
