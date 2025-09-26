@@ -11,7 +11,7 @@ public class WhileEx2 {
         int num = Integer.parseInt(sc.nextLine());
 
         int sum = 0;
-        // num이 0이 아닐 때까지 반복
+        // num이 0이 될 때까지 반복
         while (num != 0) {
             sum = sum + num % 10;
             num = num / 10;

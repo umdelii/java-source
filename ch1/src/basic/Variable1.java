@@ -5,6 +5,9 @@ public class Variable1 {
         // 변수 선언 후 값 할당
         int num = 10;
 
+        // int i; 변수 선언
+        // i = 0; 초기화
+
         int sum = num + 20;
         // 값이 제대로 나왔는지 출력으로 확인하자
         System.out.println("num+20값=" + sum);

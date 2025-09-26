@@ -27,6 +27,7 @@ public class DoWhileEx1 {
                 System.out.println("UP");
             }
         } while (answer != kotae);
+        // answer == kotae가 아니면 반복 (==면 끝내)
         System.out.println("정답");
         sc.close();
 
