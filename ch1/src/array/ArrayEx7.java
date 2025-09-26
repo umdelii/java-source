@@ -26,7 +26,7 @@ public class ArrayEx7 {
         for (int i = 0; i < src.length(); i++) {
             System.out.println(src.charAt(i));
         }
-        // for문 안쓰고 더 쉽게 하기
+        // for문 안쓰고 더 쉽게 하기 변수.toCharArray
         char[] chArr2 = src.toCharArray();
         System.out.println(Arrays.toString(chArr2));
 
