@@ -28,10 +28,10 @@ public class rensyuu1 {
             System.out.println();
             kor += tensuu[i][0];
             eng += tensuu[i][1];
-            kor += tensuu[i][2];
+            math += tensuu[i][2];
         }
         System.out.println("============================================");
-        System.out.printf("총점 %8d %8d %8d", kor, eng, math);
+        System.out.printf("총점 %6d %7d %6d", kor, eng, math);
 
     }
 }
