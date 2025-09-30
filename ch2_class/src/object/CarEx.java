@@ -24,5 +24,24 @@ public class CarEx {
 
         car3.setColor("black"); // --------------------------------------- 멤버변수 초기화 + 변경(2. setter 메소드)
         System.out.println("색상 지정 후 car3 : " + car3);
+
+        println(car2);
+        System.out.println(car2);
+    }
+
+    public static void println(Car car) {
+        // 여기서 값 변경도 가능한거 아님?
+        car.setColor("빨강"); // --------------------------------- 원본 데이터도 바꿔버림
+        System.out.println("--------------------------------------");
+        System.out.println("제조회사 : " + car.getMakerMei());
+        System.out.println("모델명 : " + car.getModelMei());
+        System.out.println("색상 : " + car.getColor());
+        System.out.println("최고시속 : " + car.getMaxHayasa());
+        System.out.println("--------------------------------------");
+
+    }
+
+    public static void test(String str) {
+
     }
 }

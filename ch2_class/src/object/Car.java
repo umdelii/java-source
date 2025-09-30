@@ -78,6 +78,14 @@ public class Car {
         this.maxHayasa = maxHayasa;
     }
 
+    public Car(String makerMei, String modelMei, int maxHayasa, String color) { // ------------------- 괄호 안의 타입 순서가 다르기
+                                                                                // 때문에 오버로딩x
+        this.makerMei = makerMei;
+        this.modelMei = modelMei;
+        this.color = color;
+        this.maxHayasa = maxHayasa;
+    }
+
     @Override
     public String toString() {
         return "Car [makerMei=" + makerMei + ", modelMei=" + modelMei + ", color=" + color + ", maxHayasa=" + maxHayasa
