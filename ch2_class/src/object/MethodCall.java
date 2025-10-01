@@ -25,7 +25,7 @@ public class MethodCall {
         // 인스턴스 메소드 호출 확인. 안되네.
         // instanceMethod1();
         MethodCall obj = new MethodCall();
-        obj.instanceMethod1(); // ----------------------------인스턴스 메소드 호출하는 법 -> 인스턴스 생성을 하면 됨
+        obj.instanceMethod1(); // ---------------------------- 인스턴스 메소드 호출하는 법 -> 인스턴스 생성을 하면 됨
     }
 
     void instanceMethod2() {

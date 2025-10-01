@@ -2,7 +2,7 @@ package object;
 
 public class CardEx {
     public static void main(String[] args) {
-        Card card1 = new Card(); // kind 인스턴스 변수 쓰고 싶음, 그러면? 인스턴스 생성
+        Card card1 = new Card(); // Card 클래스의 kind 인스턴스 변수 쓰고 싶음, 그러면? 인스턴스 생성
 
         // Card.cv = ""; // 클래스 변수 : 클래스이름.클래스변수
 

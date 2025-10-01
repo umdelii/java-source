@@ -16,12 +16,12 @@ public class Account {
         this.zandaka = zandaka;
     }
 
-    void deposit(long num1) {
-        zandaka += num1;
+    void deposit(long amount) {
+        zandaka += amount;
     }
 
-    long withdraw(long num1) {
-        return zandaka -= num1;
+    long withdraw(long amount) {
+        return zandaka -= amount;
     }
 
     // --------------------------------- private 붙인 이후 수정법 (void)오류남
