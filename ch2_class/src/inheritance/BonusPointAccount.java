@@ -17,6 +17,11 @@ public class BonusPointAccount extends Account {
         // 보너스포인트 적립은 새로 만들어야겠지 : 예금액의 1%
         bonusPoint += (int) (amount * 0.01);
         // 보너스 포인트 포함 잔액 확인
-        System.out.println("보너스 포인트 포함 잔액 : " + (amount + bonusPoint));
+        System.out.println("누적 보너스 포인트 : " + bonusPoint);
+        System.out.println("보너스 포인트 포함 잔액 : " + (super.getZandaka() + bonusPoint));
+    }
+
+    public int getBonusPoint() {
+        return bonusPoint;
     }
 }

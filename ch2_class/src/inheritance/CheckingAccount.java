@@ -1,6 +1,7 @@
 package inheritance;
 
 public class CheckingAccount extends Account {
+
     private String cardNo; // 체크카드 번호
 
     public CheckingAccount(String accountNumber, String accountName, long zandaka, String cardNo) {

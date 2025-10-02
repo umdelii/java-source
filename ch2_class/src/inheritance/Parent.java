@@ -8,6 +8,7 @@ package inheritance;
 // 상속불가 = 생성자, 초기화 블럭 등
 public class Parent {
     int age;
+    String name;
 
     public Parent() {
     }

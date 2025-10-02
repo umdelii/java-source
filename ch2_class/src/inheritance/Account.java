@@ -5,9 +5,17 @@ public class Account {
     private String accountName;
     private long zandaka;
 
-    public Account(String accountNumber, String accountName, long zandaka) {
+    public Account(String accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+    public Account(String accountNumber, String accountName) {
+        this(accountNumber);
         this.accountName = accountName;
+    }
+
+    public Account(String accountNumber, String accountName, long zandaka) {
+        this(accountNumber, accountName);
         this.zandaka = zandaka;
     }
 

@@ -27,3 +27,25 @@ Student(라는 객체를 정의)
 
 오버라이딩 - 상속에서 뜸
        : 자식 클래스에서 부모 클래스 메소드를 재정의
+
+관계 
+       1. 상속관계(is-a관계) : extends 클래스
+       2. 포함관계(has-a관계) : 한 클래스를 작성하는데 다른 클래스의 멤버변수를 가져다 와 선언
+       ex. 원(Circle)은 점(Point)이다 or 원(Circle)은 점(Point)를 가지고 있다 ---> "가지고 있다"가 맞기 때문에 포함관계로 설정
+       ex2. Car, SportsCar 
+              SportsCar는 Car이다 (O)
+              SportsCar는 Car를 가지고 있다 (X)  
+              = 상속관계로 만들자
+       ex3. 도형 : Shape / 점 : Point
+              삼각형 : Triangle 만들고 싶어~
+              Triangle은 Shape이다 -> 상속관계
+              Triangle은 Point를 가지고 있다 -> 포함관계
+              원 : Circle 만들고 싶어~
+              Circle은 Shape이다 -> 상속관계
+              Circle은 Point를 가지고 있다 -> 포함관계
+
+private : 캡슐화(은닉), 다른 클래스에서 접근못함
+
+package == 폴더 == 클래스 여러개 묶음
+import 패키지명.클래스명;
+package -> import -> class
