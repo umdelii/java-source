@@ -43,9 +43,37 @@ Student(라는 객체를 정의)
               원 : Circle 만들고 싶어~
               Circle은 Shape이다 -> 상속관계
               Circle은 Point를 가지고 있다 -> 포함관계
+접근제한자
+       public : 외부 접근 가능
+       private : 캡슐화(은닉), 다른 클래스에서 접근못함 
+              but, set이나get메소드를 만들어서 간접 접근가능
+              멤버 변수나 메소드에 붙임
+       protected :  같은 패키지, 다른 패키지의 자손 클래스에서 접근가능
+       아무것도없음(default) : 같은 패키지 내 문제없이 접근가능
 
-private : 캡슐화(은닉), 다른 클래스에서 접근못함
+       범위 = private < default < protected < public
+
+       일반적으로
+       class : public, default
+       method : public, private, default, protected
+       멤버변수(속성) : private, protected, default
+       지역변수 : X
 
 package == 폴더 == 클래스 여러개 묶음
 import 패키지명.클래스명;
 package -> import -> class
+
+부모 클래스
+       1. 일반 클래스 : 멤버변수, 상수, 생성자, 메소드
+       2. 추상 클래스 : 일반클래스 + 추상메소드
+              추상메소드 : 강제성 -> 자식 class에서 무조건 Override를 해야만 함
+       3. 인터페이스 : 상수, 추상메소드, static & default 메소드
+              표준화 : 서로 관계가 없는 class들에게 관계를 맺어줄 수 있다
+                     개발시간 단축 가능
+                     독립적인 프로그래밍 가능
+
+class -> extends 하나만 가능
+       but, interface(인터페이스) -> 복수의 extends 가능
+       그 후 implements로 인터페이스 부르면 인터페이스 안에 상속된 자식들 전부 부를수가 있다~ -> 다중상속
+              ex. public Child extends Parents implement A,B,C{}
+
