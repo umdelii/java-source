@@ -77,3 +77,10 @@ class -> extends 하나만 가능
        그 후 implements로 인터페이스 부르면 인터페이스 안에 상속된 자식들 전부 부를수가 있다~ -> 다중상속
               ex. public Child extends Parents implement A,B,C{}
 
+enum(열거 타입)
+       한정된 값을 갖는 경우
+       열거상수
+
+하나의 메소드 안의 정보를 다른 메소드로 전달하고 싶을 때
+       1. 인자
+       2. 멤버 변수로 선언하면 됨
