@@ -61,3 +61,10 @@ Generics : 다양한 타입의 객체들을 다루는 메소드나 컬렉션 클
         <?> : 제한 없음
 
 sort() : sort 대상의 클래스가 Comparator(새로운 정렬기준)이나 Comparable(기본정렬기준-오름,내림)을 구현해야함
+
+public static <T extends Comparable<? super T>> void sort(List<T> List)
+    - <T extends Comparable<T>> : T는  Comparable를 구현한 클래스여야 한다.
+        ex. - Person(부모 클래스)
+            - class Person implements Comparable{}
+            - T : Student
+            - class Student extends Person

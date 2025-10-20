@@ -1,0 +1,44 @@
+java.io package
+input / output
+
+표준 출력 : 화면 System.out
+표준 입력 : 키보드 System.in
+
+File로 입력하는 방법 ->?
+
+스트림 : 통로 
+    자바에서 파일을 불러오거나 출력을 하고싶을때 통로를 연다
+
+    바이트 단위로 처리
+        모든 종류의 파일 처리가능
+        ~~InputStream / ~~OutputStream
+        InputStream : 추상클래스
+            abstract int read() : 한 바이트를 읽어 int로 리턴
+            int read(byte[] b) : byte[]만큼 읽어오기, 그리고 읽어온 데이터 수 반환, int read()보다 더 빠름
+            int read(byte[] b, int off, int len)
+        OutputStream : 추상클래스
+            abstract void write(int b)
+            void write(byte[] b)
+            void write(byte[] b, int off, int len)
+
+    문자 단위로 처리가능
+        텍스트 파일 한정
+        ~~Reader / ~~Writer
+        Reader : 추상클래스
+            int read()
+            int read(char[] c)
+            abstract int read(char[] c, int off, int len)
+        Writer : 추상클래스
+            int write()
+            int write(char[] c)
+            abstract int read(char[] c, int off, int len)
+            void write(String str)
+            void write(String str, int off, int len)
+
+    성능향상 보조스트림
+    - BufferedInputStream + ~~InputStream
+    - BufferedOutputStream + ~~OutputStream
+    - BufferedReader + ~~Reader
+    - BufferedWriter + ~~Writer
+    - InputStreamReader : 바이트 기반 스트림을 문자기반 스트림으로 연결
+    - OutputStreamWriter : 바이트 기반 스트림의 데이터를 지정된 인코딩의 문자 데이터로 변환

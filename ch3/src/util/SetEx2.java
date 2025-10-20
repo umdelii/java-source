@@ -27,8 +27,11 @@ public class SetEx2 {
         Collections.sort(list);
         System.out.println(list);
 
-        // 그렇다면, ist -> Set으로 변환하는 방법은?
+        // 그렇다면, List -> Set으로 변환하는 방법은?
         Set<Integer> set2 = new HashSet<>(list);
         System.out.println(set2);
+
+        // forEach
+        list.forEach(null);
     }
 }

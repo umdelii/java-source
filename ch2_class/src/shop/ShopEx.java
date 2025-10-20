@@ -29,16 +29,23 @@ public class ShopEx {
 
         // User user = new User("이상훈", PayType.CARD);
 
-        MyShop myShop = new MyShop(null);
+        // MyShop myShop = new MyShop(null);
         // 이름 지정
-        myShop.setTitle("MyShop");
-        // 사용자 등록
-        myShop.genUser();
-        // 상품 등록
-        myShop.genProduct();
-        // 메뉴
-        myShop.start();
-        // 상품 출력
-        // myShop.productList();
+        // myShop.setTitle("MyShop");
+        // // 사용자 등록
+        // myShop.genUser();
+        // // 상품 등록
+        // myShop.genProduct();
+        // // 메뉴
+        // myShop.start();
+        // // 상품 출력
+        // // myShop.productList();
+
+        // 배열을 List로 변경
+        MyShop2 myShop2 = new MyShop2("My Shop2");
+        myShop2.genUser();
+        myShop2.genProduct();
+        myShop2.start();
+        myShop2.productList();
     }
 }
