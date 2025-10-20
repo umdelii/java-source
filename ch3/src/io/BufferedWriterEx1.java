@@ -16,10 +16,8 @@ public class BufferedWriterEx1 {
 
         do {
             System.out.print(">> ");
-            input += sc.nextLine();
+            input = sc.nextLine();
         } while (!input.equals("q"));
-
-        sc.close();
 
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter("c:\\temp\\scanner1.txt"));
@@ -29,5 +27,7 @@ public class BufferedWriterEx1 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        sc.close();
     }
 }
