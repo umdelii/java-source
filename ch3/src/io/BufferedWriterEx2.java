@@ -23,6 +23,8 @@ public class BufferedWriterEx2 {
                 bw.newLine();
             } while (!input.equals("q"));
 
+            System.out.println("입력 중지");
+
             bw.flush();
             bw.close();
         } catch (IOException e) {
