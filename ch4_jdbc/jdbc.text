@@ -1,0 +1,33 @@
+jdbc
+    1. 드라이버 로드
+        Class.forName("oracle.jdbc.OracleDriver"); -> Oracle
+        Class.forName("com.mysql.cj.jdbc.Driver"); -> MySQL
+
+    2. db 연결(Connection 얻기)
+        (1) oracle 
+            String url = "jdbc:oracle:thin:@localhost:1521:xe";
+            String user = "사용자아이디";
+            String password = "비밀번호";
+            Connection con = DriverManager.getConnection(url, user, password);
+
+        (2) mysql
+            String url = "jdbc:mysql//localhost:3306/database명";
+            String user = "사용자아이디";
+            String password = "비밀번호";
+            Connection con = DriverManager.getConnection(url, user, password);
+
+    3. sql 구문작성
+        (1) Connection을 통해 실행할 sql 구문 전송
+            con.prepareStatement("실행할 sql 구문");
+            db 내부에서는
+                1. sql 구문을 컴파일(구문 분석)
+                2. 실행계획 세움
+        (2) sql구문 실행
+            1. select : executeQuery();
+            2. update, delete, insert : executeUpdate();
+
+        (3) 실행 결과 받기
+            1. select -> ResultSet에 담겨옴
+            2. update, delete, insert -> int 값으로 넘어옴 (update rows : "성공한 행의 개수")
+    
+    4. 화면처리
