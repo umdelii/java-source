@@ -31,3 +31,5 @@ jdbc
             2. update, delete, insert -> int 값으로 넘어옴 (update rows : "성공한 행의 개수")
     
     4. 화면처리
+
+DAO : Data Access Object 데이터베이스 관련 작업
