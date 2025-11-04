@@ -35,10 +35,14 @@ public class ProfessorDAO {
         return result;
     }
 
-    public int upate() {
+    public int update(ProfessorDTO dto) {
         int result = 0;
         try {
-
+            String sql = "update professor set dept_id = ? where prof_id = ?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, dto.getDeptId());
+            pstmt.setString(2, dto.getProfId());
+            result = pstmt.executeUpdate();
         } catch (Exception e) {
         } finally {
             close(pstmt);
@@ -46,21 +50,36 @@ public class ProfessorDAO {
         return result;
     }
 
-    public int delete() {
+    public int delete(String profId) { // 얘 이상해
         int result = 0;
         try {
-
+            String sql = "delete from professor where prof_id = ?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, profId);
+            result = pstmt.executeUpdate();
         } catch (Exception e) {
+            e.printStackTrace();
         } finally {
             close(pstmt);
         }
         return result;
     }
 
-    public ProfessorDTO getRow() {
+    public ProfessorDTO getRow(String profId) {
         ProfessorDTO dto = null;
         try {
+            String sql = "select * from professor where prof_id = ?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, profId);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                profId = rs.getString("prof_id");
+                String deptId = rs.getString("dept_id");
+                String profName = rs.getString("prof_name");
+                dto = new ProfessorDTO(profId, deptId, profName);
 
+                return dto;
+            }
         } catch (Exception e) {
         } finally {
             close(rs);
@@ -72,7 +91,15 @@ public class ProfessorDAO {
     public List<ProfessorDTO> getRows() {
         List<ProfessorDTO> list = new ArrayList<>();
         try {
-
+            String sql = "select * from professor order by prof_id";
+            pstmt = con.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                String profId = rs.getString("prof_id");
+                String deptId = rs.getString("dept_id");
+                String profName = rs.getString("prof_name");
+                list.add(new ProfessorDTO(profId, deptId, profName));
+            }
         } catch (Exception e) {
         } finally {
             close(rs);
