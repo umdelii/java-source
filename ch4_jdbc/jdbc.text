@@ -11,7 +11,7 @@ jdbc
             Connection con = DriverManager.getConnection(url, user, password);
 
         (2) mysql
-            String url = "jdbc:mysql//localhost:3306/database명";
+            String url = "jdbc:mysql://localhost:3306/database명";
             String user = "사용자아이디";
             String password = "비밀번호";
             Connection con = DriverManager.getConnection(url, user, password);
