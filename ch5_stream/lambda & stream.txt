@@ -25,7 +25,8 @@ ex. int max(int a, int b){return a > b ? a : b;}
 
 java.util.function 패키지
  - 함수형 인터페이스를 작성해야하는 번거러움을 제거 
- - java.lang.Runnable void run(); : 매개변수 없고, 리턴타입 없음
+ - java.lang.
+ - Runnable void run(); : 매개변수 없고, 리턴타입 없음
  - Sulppier<T> T get() : 매개변수 없고, 리턴타입 있음
  - Consumer<T> void accept(T t) : 매개변수 있고, 리턴타입 없음
  - Function<T,R> R apply(T t) : 매개변수 있고, 리턴타입 있음
@@ -68,3 +69,7 @@ java.util.function 패키지
     max(Comparator<? super T> comparator)
     min(Comparator<? super T> comparator)
     collect(Collector<T,A,R> collector)
+
+Optional<T>
+OptionalInt
+OptionalDouble
